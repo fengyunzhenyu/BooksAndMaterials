@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置消息总线 （broker）的配置文件 -->
+<configuration>
+  <server>
+    <!-- ip, 这个属性暂时未使用 -->
+    <host>192.168.1.120</host>
+    <!-- 端口号，服务监听的端口号 -->
+    <port>2323</port>
+    <thread>4</thread>
+    <maxclient>5000</maxclient>
+    <auth desc="test">098f6bcd4621d373cade4e832627b4f6</auth>
+    <!--<auth desc="sumscope_auth">a479ef37f07a99a916a8d6f0eb5d07fa</auth>-->
+    <zlib>
+      <switch>1</switch>
+      <threshold>4096</threshold>
+    </zlib>
+    <connection>
+      <timeout>600</timeout>
+      <maxpacklen>104857600</maxpacklen>
+    </connection>
+  </server>
+</configuration>

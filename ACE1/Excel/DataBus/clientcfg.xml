@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置AppServer 和 AppClient	的配置文件 -->
+<configuration>
+	<!-- appName 的基本信息 -->
+  <client>
+    <appName>LocalExcel</appName>
+    <appType>1</appType>
+    <appGroup>1</appGroup>
+    <uuid>rywyetyu2453572wt3qiaWGHDGHIW1YRs</uuid>
+    <auth>test</auth>
+    <serviceList>
+      <service>1003</service>
+    </serviceList>  
+    <subscribeList>
+    	<topic>1</topic>
+    </subscribeList>
+  </client>
+  <serverGroup>
+	<!-- 消息总线的地址和端口 （broker） -->
+	 <server  IP="127.0.0.1" port="3333"></server>
+	 <!--server  IP="192.168.1.243" port="2323"></server-->
+  </serverGroup>
+  <heartbeat>
+      <maxHeartBeatTick>5</maxHeartBeatTick>
+      <hearbeatinterval>10000</hearbeatinterval>
+      <brokeninterval>3000</brokeninterval>
+      <switch>1</switch>
+  </heartbeat>
+  <zlib>
+	  <switch>1</switch>
+	  <threshold>30</threshold>
+  </zlib>
+  <connection>
+      <timeout>6000</timeout>
+  </connection>
+  <performance>
+      <threadNum>5</threadNum>
+      <buffersize>1000000</buffersize>
+      <msgqueuesize>10000</msgqueuesize>
+  </performance>
+</configuration>
